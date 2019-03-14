@@ -61,16 +61,16 @@ paths:
           description: "Task for create"
           required: true
           schema:
+            $ref: "#/definitions/Task"
+      responses:
+        201:
+          description: "Success"
+          schema:
             type: "object"
             properties:
               id:
                 type: "string"
                 example: "ai1q755jt7tys1p"
-      responses:
-        201:
-          description: "Success"
-          schema:
-            $ref: "#/definitions/Task"
         400:
           description: "Miss header with tasks owner"
 
@@ -92,8 +92,7 @@ paths:
           in: "path"
           description: "ID of task to return"
           required: true
-          type: "integer"
-          format: "int64"
+          type: "string"
       responses:
         200:
           description: "Success"
@@ -120,8 +119,7 @@ paths:
           in: "path"
           description: "ID of task to return"
           required: true
-          type: "integer"
-          format: "int64"
+          type: "serhii"
         - in: "body"
           name: "body"
           description: "Task for create"
